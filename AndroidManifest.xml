@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zncm.babylovemath"
+    android:installLocation="auto"
+    android:versionCode="600"
+    android:versionName="6.0.0">
+
+    <uses-sdk android:minSdkVersion="7" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:name="com.zncm.babylovemath.global.SharedApplication"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Sherlock.Light">
+        <activity
+            android:name="com.zncm.babylovemath.modules.Main"
+            android:theme="@style/Theme.Sherlock.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.zncm.babylovemath.modules.MainTabsPager" />
+        <activity android:name="com.zncm.babylovemath.modules.QuestionAc" />
+        <activity android:name="com.zncm.babylovemath.modules.TestAc" />
+        <activity android:name="com.zncm.babylovemath.modules.Recommend" />
+        <activity android:name=".modules.QuestionPagerActivity" />
+        <activity android:name="com.zncm.babylovemath.modules.About" />
+        <activity android:name="com.zncm.babylovemath.modules.SettingHomeActivity" />
+        <activity android:name="com.zncm.babylovemath.modules.SettingNormalActivity" />
+        <activity
+            android:name="com.zncm.babylovemath.modules.EquationAc"
+            android:screenOrientation="landscape" />
+
+
+        <activity
+            android:name="com.zncm.babylovemath.modules.SplashActivity"
+
+            android:theme="@style/Theme.Sherlock.NoActionBar" />
+
+        <!-- UMENG_ADD -->
+        <activity
+            android:name="com.umeng.fb.ConversationActivity"
+            android:theme="@style/Theme.Sherlock.NoActionBar" />
+        <activity
+            android:name="com.umeng.fb.ContactActivity"
+            android:theme="@style/Theme.Sherlock.NoActionBar" />
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5327fced56240bdab901f44a"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="JMX"></meta-data>
+
+        <service
+            android:name="com.umeng.common.net.DownloadingService"
+            android:process=":DownloadingService"></service>
+
+        <!-- UMENG_END -->
+    </application>
+
+    <!-- UMENG_ADD -->
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+
+
+    <!-- UMENG_END -->
+
+</manifest>
